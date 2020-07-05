@@ -162,7 +162,7 @@ while ( my $line = $in->getline() ) {
 
   # Project the old slice to the current assembly and display
   # information about each resulting segment.
-  foreach my $segment ( @{ $old_slice->project('chromosome', 'GRCh37') } ) {
+  foreach my $segment ( @{ $old_slice->project($old_cs_name, 'GRCh37') } ) {
     # We display the old slice info followed by a comma and then the new
     # slice (segment) info.
     printf( "%s:%s:%s:%d:%d:%d,%s\n",

@@ -1,3 +1,25 @@
+##########################################################################
+# A program to map slices from old assemblies to the latest assembly.    #
+#                                                                        #
+# To run AssemblyMapperRest.py script enter to the command line          #
+# 'AssemblyMapperRest.py' with 2 parameters: species and input file name.#
+#                                                                        #
+#    python AssemblyMapperRest.py <species> <inputFileName>              #
+#                                                                        #
+# Input file contains a list of slices to map to the GRCh37 assembly.    # 
+#                                                                        #
+#    coord_system:version:seq_region_name:start:end:strand               #
+#                                                                        #
+# For example:                                                           #
+#                                                                        #
+#    chromosome:GRCh38:X:1:10000:1                                       #
+#                                                                        #
+#                                                                        #
+# Example of usage:                                                      #
+#    python AssemblyMapperRest.py human assemblymapper.in                #
+#                                                                        #
+##########################################################################
+
 import requests, sys, os
 
 ## This script is mapping slices from one assemblies(GRCh38) to the another(GRCh37).
